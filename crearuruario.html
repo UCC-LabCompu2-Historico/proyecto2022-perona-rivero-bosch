@@ -11,22 +11,81 @@
 
     <style>
         body{
-            text-align: center;
-            font-family: 'Rubik', sans-serif;
-            background: whitesmoke;
-        }
+            margin:0;
+            padding: 0;
+            background:whitesmoke ;
+            font-family: sans-serif;
 
         }
         #iniciar{
-            border: 2px #3679c5;
-            margin: 10px;
-            padding: 5px 30px;
-            border-radius: 15px;
+            width: 320px;
+            height: 420px;
+            background: black;
+            color: white;
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            box-sizing: border-box;
+            padding: 70px 30px;
+        }
 
+        .avatar{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            position: absolute;
+            top: -50px;
+            left: calc(50%-50px);
+        }
+
+        #iniciar h1{
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            font-size: 20px;
+        }
+        #iniciar label{
+            margin: 0;
+            padding: 0;
+            font-weight: bold;
+            display: block;
+        }
+        #iniciar input {
+            width: 100%;
+            margin-bottom:20px ;
+        }
+        #iniciar input[type="email"],#iniciar input[type="password"]{
+            border: none;
+            border-bottom: 1px solid white;
+            background: transparent;
+            outline: none;
+            height: 40px;
+            color: white;
+            font-size: 12px;
+        }
+        #iniciar input[type="submit"]{
+            border: none;
+            outline: none;
+            height: 40px;
+            background: white;
+            color: black;
+            font-size: 16px;
+            border-radius: 20px;
 
         }
 
+        #iniciar a{
+            text-decoration: none;
+            font-size: 12px;
+            line-height: 20px;
+            color: darkgray;
 
+
+        }
+        #iniciar a:hover{
+            color: white;
+        }
 
 
     </style>
@@ -37,12 +96,16 @@
 <header>
     <div id="iniciar">
 
-            <p>INICIAR SESION:</p>
-            <form>
-                 <p>Email: <input type="email" name="email" placeholder="emal@dominio.com"></p>
-                <p> Contraseña: <input type="password" name="psw" placeholder="password"></p>
+        <img  class="avatar" src="imagenes/s.jpg" alt="iniciar sesion">
+        <p><h1>INICIAR SESION:</h1></p>
+        <form>
+            <p><label for="email">Email:</label><input type="email" name="email" placeholder="emal@dominio.com"></p>
+            <p><label for="contraseña">Contraseña:</label><input type="password" name="psw" placeholder="password"></p>
 
-                <a href="registrar.html" > registrarme </a>
+            <p>
+                <input type="submit" value="iniciar sesion">
+            </p>
+            <a href="registrar.html" > Registrarme </a>
 
 
         </form>
