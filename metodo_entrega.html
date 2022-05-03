@@ -13,52 +13,51 @@
         body{
             margin:0;
             padding: 0;
-            background:whitesmoke ;
+            background: black; ;
             font-family: 'Ubuntu', sans-serif;
 
 
         }
-        #registrarme {
-            width: 400px;
-            height: 560px;
-            background: black;
-            color: white;
+        #entrega{
+            width: 450px;
+            height: 300px;
+            background: whitesmoke;
+            color: black;
             top: 50%;
             left: 50%;
             position: absolute;
             transform: translate(-50%, -50%);
             box-sizing: border-box;
-            padding: 70px 30px;
+            padding: 30px 20px;
         }
 
-
-        #registrarme h1{
+        #entrega h1{
             margin: 0;
             padding: 0;
             text-align: center;
-            font-size: 18px;
+            font-size: 20px;
+
         }
-        #registrarme label{
+        #entrega label{
             margin: 0;
             padding: 0;
             font-weight: bold;
             display: block;
         }
-        #registrarme input {
+        #entrega input {
             width: 100%;
             margin-bottom:20px ;
         }
-        #registrarme input[type="email"],#registrarme input[type="password"],
-        #registrarme input[type="password"],#registrarme input[type="text"]{
+        #entrega input[type="radio"]{
             border: none;
             border-bottom: 1px solid white;
             background: transparent;
             outline: none;
-            height: 40px;
+            height: 15px;
             color: white;
-            font-size: 12px;
+            font-size: 20px;
         }
-        #registrarme input[type="submit"]{
+        #entrega input[type="submit"]{
             border: none;
             outline: none;
             height: 40px;
@@ -71,27 +70,25 @@
 
 
 
+
     </style>
 
 </head>
 <body>
 
 <header>
-    <div id="registrarme">
+    <div id="entrega">
 
+       <p><h1> METODO DE ENTREGA:</h1></p>
 
-        <p><h1>REGISTRARME:</h1></p>
         <form>
-            <p><label for="usuario">Usuario:</label><input type="text" name="usuario" placeholder="Usuario"></p>
-            <p><label for="email">Email:</label><input type="email" name="email" placeholder="emal@dominio.com"></p>
-            <p><label for="contraseña">Contraseña:</label><input type="password" name="psw" placeholder="password"></p>
-            <p><label for="confirmar_contraseña">Confirmar contraseña:</label><input type="password" name="psw" placeholder="password"></p>
 
+            <p><label for="local">Retiro por local </label> <input type="radio" name="entrega" value="local" id="local" ></p>
+           <p><label for="domicilio"> Envio a domicilio </label> <input type="radio" name="entrega" value="domicilio" id="domicilio" >
+           </p>
             <p>
-                <input type="submit" value="registrarme">
+                <input type="submit" value="CONTINUAR">
             </p>
-
-
 
         </form>
 
