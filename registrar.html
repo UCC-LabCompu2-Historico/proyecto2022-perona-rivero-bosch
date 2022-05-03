@@ -6,23 +6,100 @@
     <meta content= "Perona Valentina - Rivero Bosch Josefina " name="autor">
     <meta content="Web pagina de ropa" name="descripcion">
     <meta content="ropa, compra" name="palabras principales">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+
+
+    <style>
+        body{
+            margin:0;
+            padding: 0;
+            background:whitesmoke ;
+            font-family: sans-serif;
+
+        }
+        #registrarme {
+            width: 400px;
+            height: 560px;
+            background: black;
+            color: white;
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            box-sizing: border-box;
+            padding: 70px 30px;
+        }
+
+
+        #registrarme h1{
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            font-size: 18px;
+        }
+        #registrarme label{
+            margin: 0;
+            padding: 0;
+            font-weight: bold;
+            display: block;
+        }
+        #registrarme input {
+            width: 100%;
+            margin-bottom:20px ;
+        }
+        #registrarme input[type="email"],#registrarme input[type="password"],
+        #registrarme input[type="password"],#registrarme input[type="text"]{
+            border: none;
+            border-bottom: 1px solid white;
+            background: transparent;
+            outline: none;
+            height: 40px;
+            color: white;
+            font-size: 12px;
+        }
+        #registrarme input[type="submit"]{
+            border: none;
+            outline: none;
+            height: 40px;
+            background: white;
+            color: black;
+            font-size: 16px;
+            border-radius: 20px;
+
+        }
+
+
+
+    </style>
 
 </head>
 <body>
 
 <header>
-    <p>REGISTRARME:</p>
-    <form>
-        <p>Nombre: <input type="text" name="nombre" placeholder="Nombre"></p>
-        <p> Apellido: <input type="text" name="apellido" placeholder="Apellido"></p>
-        <p>Email: <input type="email" name="email" placeholder="emal@dominio.com"></p>
-        <p> Contraseña: <input type="password" name="psw" placeholder="password"></p>
-        <p> Confirmar contraseña: <input type="password" name="conf_psw" placeholder="password"></p>
-        <p><button type="button">registrarme</button></p>
-    </form>
+    <div id="registrarme">
+
+
+        <p><h1>REGISTRARME:</h1></p>
+        <form>
+            <p><label for="usuario">Usuario:</label><input type="text" name="usuario" placeholder="Usuario"></p>
+            <p><label for="email">Email:</label><input type="email" name="email" placeholder="emal@dominio.com"></p>
+            <p><label for="contraseña">Contraseña:</label><input type="password" name="psw" placeholder="password"></p>
+            <p><label for="confirmar_contraseña">Confirmar contraseña:</label><input type="password" name="psw" placeholder="password"></p>
+
+            <p>
+                <input type="submit" value="registrarme">
+            </p>
+
+
+
+        </form>
+
+
+    </div>
+
+
+
 </header>
-
-
 
 </body>
 </html>
