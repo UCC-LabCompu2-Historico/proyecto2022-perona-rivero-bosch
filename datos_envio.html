@@ -13,14 +13,14 @@
         body{
             margin:0;
             padding: 0;
-            background: black; ;
+            background:black ;
             font-family: 'Ubuntu', sans-serif;
 
 
         }
-        #entrega{
-            width: 450px;
-            height: 300px;
+        #envio {
+            width: 400px;
+            height: 560px;
             background: #e8e6e6;
             color: black;
             top: 50%;
@@ -28,37 +28,38 @@
             position: absolute;
             transform: translate(-50%, -50%);
             box-sizing: border-box;
-            padding: 30px 20px;
-            border-radius: 15%;
+            padding: 40px 30px;
+            border-radius: 10%;
         }
 
-        #entrega h1{
+
+        #envio  h1{
             margin: 0;
             padding: 0;
             text-align: center;
             font-size: 20px;
-
         }
-        #entrega label{
+        #envio  label{
             margin: 0;
             padding: 0;
             font-weight: bold;
             display: block;
         }
-        #entrega input {
+        #envio  input {
             width: 100%;
             margin-bottom:20px ;
         }
-        #entrega input[type="radio"]{
+
+        #envio  input[type="number"],#envio  input[type="text"]{
             border: none;
-            border-bottom: 1px solid black;
+            border-bottom: 1px solid white;
             background: transparent;
             outline: none;
-            height: 15px;
+            height: 40px;
             color: black;
-            font-size: 20px;
+            font-size: 12px;
         }
-        #entrega input[type="submit"]{
+        #envio  input[type="submit"]{
             border: none;
             outline: none;
             height: 40px;
@@ -71,25 +72,27 @@
 
 
 
-
     </style>
 
 </head>
 <body>
 
 <header>
-    <div id="entrega">
+    <div id="envio">
 
-       <p><h1> METODO DE ENTREGA:</h1></p>
 
+        <p><h1>DATOS DE ENVIO:</h1></p>
         <form>
+            <p><label for="codigo">Codigo postal:</label><input type="number" name="codigo" placeholder="codigo" id="codigo"></p>
+            <p><label for="barrio">Barrio:</label><input type="text" name="barrio" placeholder="Barrio" id="barrio"></p>
+            <p><label for="calle">Calle:</label><input type="text" name="calle" placeholder="Calle" id="calle"></p>
+            <p><label for="numero">Numero:</label><input type="number" name="numero" placeholder="ej:1234" id="numero"></p>
 
-            <p><label for="local">Retiro por local </label> <input type="radio" name="entrega" value="local" id="local" ></p>
-           <p><label for="domicilio"> Envio a domicilio </label> <input type="radio" name="entrega" value="domicilio" id="domicilio" >
-           </p>
             <p>
                 <input type="submit" value="CONTINUAR">
             </p>
+
+
 
         </form>
 
