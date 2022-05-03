@@ -6,27 +6,137 @@
     <meta content= "Perona Valentina - Rivero Bosch Josefina " name="autor">
     <meta content="Web pagina de ropa" name="descripcion">
     <meta content="ropa, compra" name="palabras principales">
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
+
+
+    <style>
+        #header{
+            padding: 0px;
+            margin: 0px;
+            width: 500px;
+            font-family: Tahoma;
+            float: bottom;
+
+        }
+        ul, ol{
+            list-style: none;
+        }
+        .nav li a {
+            background-color:white;
+            color: black;
+            text-decoration:none ;
+            padding: 10px 15px;
+            display: block;
+        }
+        .nav  li a:hover{
+            background-color:ghostwhite;
+        }
+        .nav > li{
+            float:left;
+        }
+        .nav li ul{
+            display: none;
+            position:absolute;
+            min-width: 140px;
+        }
+        .nav li:hover > ul {
+            display: block;
+        }
+        .nav li ul li{
+            position:relative;
+        }
+        .nav li ul li ul{
+            right: -140px;
+            top: 0px;
+        }
+
+
+        .material-symbols-outlined {
+            font-variation-settings:
+                    'FILL' 0,
+                    'wght' 400,
+                    'GRAD' 0,
+                    'opsz' 48
+
+        }
+        .material-symbols-outlined {
+            font-variation-settings:
+                    'FILL' 0,
+                    'wght' 400,
+                    'GRAD' 0,
+                    'opsz' 48
+        }
+        .material-symbols-outlined{
+            float:right;
+        }
+
+
+        #titulo
+        {
+            font-size: 50px;
+            text-align: center;
+            margin: 50px;
+
+        }
+        div
+    </style>
 </head>
+
+
 <body>
 
+<div id="header">
+    <ul class="nav">
+        <li>   <a href=""><span class="material-symbols-outlined">menu</span></a>
+
+            <ul>
+                <li><a href="">Pantalones</a>
+                    <ul>
+                        <li><a href="">Jeans</a></li>
+                        <li><a href="">Shorts</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Remeras</a>
+                    <ul>
+                        <li><a href="">Top</a></li>
+                        <li><a href="">Largas</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+
+
+    </ul>
+
+</div>
+<div>
+    <a href="crearuruario.html"> <span class="material-symbols-outlined">  account_circle </span></a>
+
+</div>
+
 <header>
-    <h1>SARA</h1>
+    <div id="titulo">
+        <h1>SARA</h1>
+
+    </div>
+
+    <div id="imagen">
+        <img src="imagenes/imagen1_principal.jpg">
+        <img src="imagenes/imagen2_principal.jpg">
+        <img src="imagenes/imagen3_principal.jpg">
+    </div>
 
 
-    <img src="imagenes/imagen1_principal.jpg">
-    <img src="imagenes/imagen2_principal.jpg">
-    <img src="imagenes/imagen3_principal.jpg">
-
-    <a href="crearuruario.html"> <img src="imagenes/crear_usuario.jpg"></a>
 
 
 </header>
 <footer>
-    <p> contacto:</p>
+    <p> Contacto:</p>
     <ul>
-        <li> numero de telefono</li>
-        <li>mail</li>
+        <li> Numero de telefono</li>
+        <li>Mail</li>
     </ul>
     <p> Ubicaciones:</p>
     <ul>
