@@ -1,15 +1,14 @@
 #titulo{
     padding: 0px;
-    margin: 0px;
+    margin: 0;
     width: 1000px;
     font-family: 'Libre Bodoni', serif;
     float: bottom;
+    font-size: 50px;
+    text-align: center;
+    margin: 90px;
 
-      font-size: 50px;
-      text-align: center;
-      margin: 90px;
-
-  }
+}
 
 }
 ul, ol{
@@ -62,6 +61,7 @@ ul, ol{
 }
 .material-symbols-outlined{
     float:right;
+    size: 5px;
 }
 
 
@@ -69,14 +69,14 @@ ul, ol{
 
 
 #footer{
-    font-family: Tahoma;
+    font-family: 'Libre Bodoni', serif;
 
 }
 .contacto{
     text-align: left;
 }
 .ubicaciones{
-    text-align: right;
+    text-align: left;
 }
 
 
