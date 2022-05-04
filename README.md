@@ -1,5 +1,5 @@
 # Pagina de Ropa:
-proyecto2022
+
 
 ## Autor
 * **Perona** Valentina
@@ -17,6 +17,6 @@ proyecto2022
 
 
 
-Link del Proyecto: [GitHub (https://github.com/UCC-LabCompu2/proyecto2022-perona-rivero-bosch)]
+Link de Pagina Web: [GitHub (https://ucc-labcompu2.github.io/proyecto2022-perona-rivero-bosch/index.html)]
 
 
