@@ -252,7 +252,7 @@ body {
     font-weight: bold;
     display: block;
 }
-#entrega input {
+#entrega button {
     width: 100%;
     margin-bottom:20px ;
 }
@@ -265,7 +265,7 @@ body {
     color: white;
     font-size: 20px;
 }
-#entrega input[type="submit"]{
+#entrega button[type="button"]{
     border: none;
     outline: none;
     height: 40px;
@@ -303,7 +303,7 @@ body {
     font-weight: bold;
     display: block;
 }
-#envio  input {
+#envio  button {
     width: 100%;
     margin-bottom:20px ;
 }
@@ -317,7 +317,7 @@ body {
     color: white;
     font-size: 12px;
 }
-#envio  input[type="submit"]{
+#envio  button[type="button"]{
     border: none;
     outline: none;
     height: 40px;
