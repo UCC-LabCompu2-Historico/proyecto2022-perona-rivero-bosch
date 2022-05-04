@@ -1,3 +1,5 @@
+
+
 #titulo{
     padding: 0px;
     margin: 0;
@@ -10,7 +12,7 @@
 
 }
 
-}
+
 ul, ol{
     list-style: none;
 }
@@ -64,6 +66,10 @@ ul, ol{
     size: 5px;
 }
 
+.img{
+
+}
+
 
 
 
@@ -89,6 +95,7 @@ body {
     padding: 0;
     background: white;
     font-family: 'Ubuntu', sans-serif;
+
 }
 
 
@@ -129,7 +136,7 @@ body {
     font-weight: bold;
     display: block;
 }
-#iniciar input {
+#iniciar button {
     width: 100%;
     margin-bottom:20px ;
 }
@@ -142,7 +149,7 @@ body {
     color: white;
     font-size: 12px;
 }
-#iniciar input[type="submit"]{
+#iniciar button[type="button"]{
     border: none;
     outline: none;
     height: 40px;
@@ -192,7 +199,7 @@ body {
     font-weight: bold;
     display: block;
 }
-#registrarme input {
+#registrarme button {
     width: 100%;
     margin-bottom:20px ;
 }
@@ -206,7 +213,7 @@ body {
     color: white;
     font-size: 12px;
 }
-#registrarme input[type="submit"]{
+#registrarme button[type="button"]{
     border: none;
     outline: none;
     height: 40px;
