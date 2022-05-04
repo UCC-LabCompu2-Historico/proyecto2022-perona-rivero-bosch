@@ -9,6 +9,10 @@ proyecto2022
 
 ## Contenido/Descripcion
 
+## Tecnologias usadas
+* HTML5
+* CSS
+
 
 
 
