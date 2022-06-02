@@ -1,97 +1,167 @@
 
-
-#titulo{
+#titulo {
     padding: 0px;
     margin: 0;
     width: 1000px;
-    font-family: 'Libre Bodoni', serif;
+    /*font-family: 'Libre Bodoni', serif;*/
+    font-family: 'Linotype Didot Pro Roman', serif;
     float: bottom;
     font-size: 50px;
     text-align: center;
-    margin: 90px;
+    margin: 100px;
 
 }
 
 
-ul, ol{
+ul, ol {
     list-style: none;
 }
+
 .nav li a {
-    background-color:white;
+    background-color: white;
     color: black;
-    text-decoration:none ;
+    text-decoration: none;
     padding: 10px 15px;
     display: block;
 }
-.nav  li a:hover{
-    background-color:ghostwhite;
+
+.nav li a:hover {
+    background-color: ghostwhite;
 }
-.nav > li{
-    float:left;
+
+.nav > li {
+    float: left;
 }
-.nav li ul{
+
+.nav li ul {
     display: none;
-    position:absolute;
+    position: absolute;
     min-width: 140px;
 }
+
 .nav li:hover > ul {
     display: block;
 }
-.nav li ul li{
-    position:relative;
+
+.nav li ul li {
+    position: relative;
 }
-.nav li ul li ul{
+
+.nav li ul li ul {
     right: -140px;
     top: 0px;
 }
 
 
+/*simbolos pag principal*/
 .material-symbols-outlined {
-    font-variation-settings:
-            'FILL' 0,
-            'wght' 400,
-            'GRAD' 0,
-            'opsz' 48
+    font-variation-settings: 'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
 
 }
+
 .material-symbols-outlined {
-    font-variation-settings:
-            'FILL' 0,
-            'wght' 400,
-            'GRAD' 0,
-            'opsz' 48
+    font-variation-settings: 'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
 }
-.material-symbols-outlined{
-    float:right;
+
+.material-symbols-outlined {
+    float: right;
     size: 5px;
 }
 
-.img{
+
+/* imagenes pag principal*/
+.slider {
+    widht: 20%;
+    margin: 0;
+    overflow-x: hidden;
+
+}
+
+.slider ul {
+    display: flex;
+    padding: 0;
+    widht: 100%;
+
+    animation: cambio 20s infinite;
+
+}
+
+.slider li {
+    widht: 100%;
+    list-style: none;
+}
+
+.slider img {
+    widht: 20%;
+
+}
+
+@keyframes cambio {
+    0% {
+        margin-left: 0;
+    }
+    20% {
+        margin-left: 0;
+    }
+
+    25% {
+        margin-left: -50%;
+    }
+    45% {
+        margin-left: -50%;
+    }
+
+    50% {
+        margin-left: -100%;
+    }
+    70% {
+        margin-left: -100%;
+    }
+
+    75% {
+        margin-left: -150%;
+    }
+    100% {
+        margin-left: -150%;
+    }
+
 
 }
 
 
-
-
-
-#footer{
-    font-family: 'Libre Bodoni', serif;
-
-}
-.contacto{
-    text-align: left;
-}
-.ubicaciones{
-    text-align: left;
+.contact {
+    background: #000203;
+    color: #dcd8d8;
+    position: relative;
+    height: 50%;
 }
 
+.content {
+    padding-top: 3%;
+}
 
+.contact a {
+    color: #dcd8d8;
+}
 
+.contact a:hover {
+    color: #cbc8c8;
+}
 
+.ubicaciones {
+    text-align: center;
+
+}
 
 
 body {
-    margin:0;
+    margin: 0;
     padding: 0;
     background: white;
     font-family: 'Ubuntu', sans-serif;
@@ -99,9 +169,7 @@ body {
 }
 
 
-
-
-#iniciar{
+#iniciar {
     width: 320px;
     height: 420px;
     background: black;
@@ -115,32 +183,35 @@ body {
     border-radius: 15%;
 }
 
-.avatar{
+.avatar {
     width: 100px;
     height: 100px;
     border-radius: 50%;
     position: absolute;
     top: -50px;
-    left: calc(50%-50px);
+    left: calc(50% - 50px);
 }
 
-#iniciar h1{
+#iniciar h1 {
     margin: 0;
     padding: 0;
     text-align: center;
     font-size: 20px;
 }
-#iniciar label{
+
+#iniciar label {
     margin: 0;
     padding: 0;
     font-weight: bold;
     display: block;
 }
+
 #iniciar button {
     width: 100%;
-    margin-bottom:20px ;
+    margin-bottom: 20px;
 }
-#iniciar input[type="email"],#iniciar input[type="password"]{
+
+#iniciar input[type="email"], #iniciar input[type="password"] {
     border: none;
     border-bottom: 1px solid white;
     background: transparent;
@@ -149,7 +220,8 @@ body {
     color: white;
     font-size: 12px;
 }
-#iniciar button[type="button"]{
+
+#iniciar button[type="button"] {
     border: none;
     outline: none;
     height: 40px;
@@ -160,7 +232,7 @@ body {
 
 }
 
-#iniciar a{
+#iniciar a {
     text-decoration: none;
     font-size: 12px;
     line-height: 20px;
@@ -168,7 +240,8 @@ body {
 
 
 }
-#iniciar a:hover{
+
+#iniciar a:hover {
     color: white;
 }
 
@@ -187,24 +260,27 @@ body {
 }
 
 
-#registrarme h1{
+#registrarme h1 {
     margin: 0;
     padding: 0;
     text-align: center;
     font-size: 20px;
 }
-#registrarme label{
+
+#registrarme label {
     margin: 0;
     padding: 0;
     font-weight: bold;
     display: block;
 }
+
 #registrarme button {
     width: 100%;
-    margin-bottom:20px ;
+    margin-bottom: 20px;
 }
-#registrarme input[type="email"],#registrarme input[type="password"],
-#registrarme input[type="password"],#registrarme input[type="text"]{
+
+#registrarme input[type="email"], #registrarme input[type="password"],
+#registrarme input[type="password"], #registrarme input[type="text"] {
     border: none;
     border-bottom: 1px solid white;
     background: transparent;
@@ -213,7 +289,8 @@ body {
     color: white;
     font-size: 12px;
 }
-#registrarme button[type="button"]{
+
+#registrarme button[type="button"] {
     border: none;
     outline: none;
     height: 40px;
@@ -225,7 +302,7 @@ body {
 }
 
 
-#entrega{
+#entrega {
     width: 450px;
     height: 300px;
     background: black;
@@ -239,24 +316,27 @@ body {
     border-radius: 15%;
 }
 
-#entrega h1{
+#entrega h1 {
     margin: 0;
     padding: 0;
     text-align: center;
     font-size: 20px;
 
 }
-#entrega label{
+
+#entrega label {
     margin: 0;
     padding: 0;
     font-weight: bold;
     display: block;
 }
+
 #entrega button {
     width: 100%;
-    margin-bottom:20px ;
+    margin-bottom: 20px;
 }
-#entrega input[type="radio"]{
+
+#entrega input[type="radio"] {
     border: none;
     border-bottom: 1px solid black;
     background: transparent;
@@ -265,7 +345,8 @@ body {
     color: white;
     font-size: 20px;
 }
-#entrega button[type="button"]{
+
+#entrega button[type="button"] {
     border: none;
     outline: none;
     height: 40px;
@@ -291,24 +372,26 @@ body {
 }
 
 
-#envio  h1{
+#envio h1 {
     margin: 0;
     padding: 0;
     text-align: center;
     font-size: 20px;
 }
-#envio  label{
+
+#envio label {
     margin: 0;
     padding: 0;
     font-weight: bold;
     display: block;
 }
-#envio  button {
+
+#envio button {
     width: 100%;
-    margin-bottom:20px ;
+    margin-bottom: 20px;
 }
 
-#envio  input[type="number"],#envio  input[type="text"]{
+#envio input[type="number"], #envio input[type="text"] {
     border: none;
     border-bottom: 1px solid white;
     background: transparent;
@@ -317,7 +400,8 @@ body {
     color: white;
     font-size: 12px;
 }
-#envio  button[type="button"]{
+
+#envio button[type="button"] {
     border: none;
     outline: none;
     height: 40px;
@@ -328,7 +412,7 @@ body {
 
 }
 
-#pago{
+#pago {
     width: 450px;
     height: 300px;
     background: black;
@@ -342,24 +426,27 @@ body {
     border-radius: 15%;
 }
 
-#pago h1{
+#pago h1 {
     margin: 0;
     padding: 0;
     text-align: center;
     font-size: 20px;
 
 }
-#pago label{
+
+#pago label {
     margin: 0;
     padding: 0;
     font-weight: bold;
     display: block;
 }
+
 #pago input {
     width: 100%;
-    margin-bottom:20px ;
+    margin-bottom: 20px;
 }
-#pago input[type="radio"]{
+
+#pago input[type="radio"] {
     border: none;
     border-bottom: 1px solid black;
     background: transparent;
@@ -368,7 +455,8 @@ body {
     color: white;
     font-size: 20px;
 }
-#pago input[type="submit"]{
+
+#pago input[type="submit"] {
     border: none;
     outline: none;
     height: 40px;
@@ -379,39 +467,43 @@ body {
 
 }
 
-.JEANS{
+.JEANS {
     top: 50%;
     left: 40%;
     position: absolute;
     font-family: Tahoma;
 }
 
-.product img{
+.product img {
     width: 350px;
 }
-.product h3{
+
+.product h3 {
     front-size: 1.7em;
-    margin-top:10px; accent-color: antiquewhite;
+    margin-top: 10px;
+    accent-color: antiquewhite;
     margin-bottom: 5px;
 }
-.card{
+
+.card {
     background-color: white;
 }
 
-.REMERAS{
-    top: 50%;
-    left: 40%;
-    position: absolute;
-    font-family: Tahoma;
-}
-.SHORTS{
+.REMERAS {
     top: 50%;
     left: 40%;
     position: absolute;
     font-family: Tahoma;
 }
 
-.TOPS{
+.SHORTS {
+    top: 50%;
+    left: 40%;
+    position: absolute;
+    font-family: Tahoma;
+}
+
+.TOPS {
     top: 50%;
     left: 40%;
     position: absolute;
