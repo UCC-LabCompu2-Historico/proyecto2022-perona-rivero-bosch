@@ -1,12 +1,10 @@
 
 #titulo {
-    padding: 0px;
-    margin: 0;
+    padding: 0;
     width: 1000px;
-    /*font-family: 'Libre Bodoni', serif;*/
     font-family: 'Linotype Didot Pro Roman', serif;
     float: bottom;
-    font-size: 50px;
+    font-size: 60px;
     text-align: center;
     margin: 100px;
 
@@ -49,35 +47,39 @@ ul, ol {
 
 .nav li ul li ul {
     right: -140px;
-    top: 0px;
+    top: 0;
 }
 
 
 /*simbolos pag principal*/
-.material-symbols-outlined {
-    font-variation-settings: 'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 48
-
-}
-
-.material-symbols-outlined {
-    font-variation-settings: 'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 48
-}
 
 .material-symbols-outlined {
     float: right;
     size: 5px;
 }
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+
+}
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+
+}
+
+
+
+/*ifn*/
 
 
 /* imagenes pag principal slider*/
 .slider {
-    widht: 20%;
+    widht: 100%;
     margin: 0;
     overflow-x: hidden;
 
@@ -479,7 +481,7 @@ body {
 }
 
 .product h3 {
-    front-size: 1.7em;
+    font-size: 1.7em;
     margin-top: 10px;
     accent-color: antiquewhite;
     margin-bottom: 5px;
