@@ -55,7 +55,7 @@ ul, ol {
 
 .material-symbols-outlined {
     float: right;
-    size: 5px;
+    size: 10px;
 }
 .material-symbols-outlined {
     font-variation-settings: 'FILL' 0,
@@ -71,6 +71,14 @@ ul, ol {
     'opsz' 48
 
 }
+ .material-symbols-outlined {
+     font-variation-settings:
+             'FILL' 0,
+             'wght' 400,
+             'GRAD' 0,
+             'opsz' 48
+ }
+
 
 
 
