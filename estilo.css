@@ -79,28 +79,28 @@ ul, ol {
 
 /* imagenes pag principal slider*/
 .slider {
-    widht: 100%;
-    margin: 0;
-    overflow-x: hidden;
+    width:95%;
+    margin: auto;
+    overflow: hidden;
 
 }
 
 .slider ul {
     display: flex;
     padding: 0;
-    widht: 100%;
+    width:400%;
 
     animation: cambio 20s infinite;
-
+    animation-direction: alternate;
 }
 
 .slider li {
-    widht: 100%;
+    width:100%;
     list-style: none;
 }
 
 .slider img {
-    widht: 20%;
+    width:100%;
 
 }
 
@@ -113,24 +113,24 @@ ul, ol {
     }
 
     25% {
-        margin-left: -50%;
+        margin-left: -100%;
     }
     45% {
-        margin-left: -50%;
+        margin-left: -100%;
     }
 
     50% {
-        margin-left: -100%;
+        margin-left: -200%;
     }
     70% {
-        margin-left: -100%;
+        margin-left: -200%;
     }
 
     75% {
-        margin-left: -150%;
+        margin-left: -300%;
     }
     100% {
-        margin-left: -150%;
+        margin-left: -300%;
     }
 
 
