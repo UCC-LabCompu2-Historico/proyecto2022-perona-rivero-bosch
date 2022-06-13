@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Pagina de Ropa</title>
@@ -8,37 +8,52 @@
     <meta content="ropa, compra" name="palabras principales">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilo.css">
+    <script type="text/javascript" src="funciones.js"></script>
 
     <style>
 
     </style>
 
 </head>
-<body>
+<body class="body-num">
 
 <header>
     <div id="pago">
 
-        <p>
-        <h1> METODO DE PAGO:</h1></p>
 
-        <form>
+        <h1> METODO DE PAGO:</h1>
 
-            <p><label for="tarjeta">Tarjeta (Debito o Credito): </label> <input type="radio" name="pago" value="tarjeta"
-                                                                                id="tarjeta"></p>
-            <p><label for="transferencia"> Transferencia: </label> <input type="radio" name="pago" value="transferencia"
-                                                                          id="transferencia">
+        <form name="formularioPago" method="get" action="#">
+
+
+            <p><label for="local">Retiro por local </label> <input type="radio" name="entrega" value="por_local"
+                                                                   id="local">
+            </p>
+            <p><label for="domicilio"> Envio a domicilio </label> <input type="radio" name="entrega" value="domicilio"
+                                                                         id="domicilio">
             </p>
             <p>
-                <label for="continuar"></label><input type="submit" value="CONTINUAR" id="continuar">
-            </p>
 
+            <p><label>Pago: </label><select id="tipo" name="tipo">
+
+                <option value="">Transferencia</option>
+
+                <option value="tarjeta">Tarjeta (Debito o Credito)</option>
+
+            </select>
+        </p>
+            <p>
+                <button class="botoncontinuar" onclick="cargarMetodo()">CONTINUAR</button>
+            </p>
         </form>
+    </div>
+
+    <div>
+
+        <div id="datos"><h4> Datos de la compra: </h4></div>
 
 
     </div>
-
-
 </header>
 
 </body>
