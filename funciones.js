@@ -6,27 +6,7 @@
  * @return
  */
 
-function guardar_local_storage_iniciar(){
-    var mail, contra;
 
-    mail = document.getElementById("email").value;
-    contra = document.getElementById("contraseña").value;
-
-    localStorage.setItem("emailLS", mail);
-    localStorage.setItem("contraseñaLS", contra);
-
-    window.open('pagar.html');
-
-}
-
-function cargar_local_storage_iniciar(){
-    var mail, contra;
-
-    mail = localStorage.getItem("emailLS");
-    contra = localStorage.getItem("contraseñaLS");
-
-    document.getElementById("datos_compra").value = mail;
-}
 
 function cargar_iniciar(){
     var mail, urlComp;

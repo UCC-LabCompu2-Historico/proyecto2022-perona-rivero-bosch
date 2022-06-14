@@ -1,6 +1,8 @@
 /*INDEX*/
 
-{  box-sizing: border-box;
+{
+    box-sizing: border-box
+;
 }
 
 body {
@@ -34,8 +36,6 @@ img {
 .main {
     padding: 20px;
 }
-
-
 
 
 /*IMAGENES*/
@@ -133,6 +133,7 @@ ul, ol {
 .nav li:hover > ul {
     display: block;
 }
+
 .nav li ul li {
     position: relative;
 }
@@ -146,6 +147,7 @@ ul, ol {
     float: right;
     size: 10px;
 }
+
 .material-symbols-outlined {
     font-variation-settings: 'FILL' 0,
     'wght' 400,
@@ -153,6 +155,7 @@ ul, ol {
     'opsz' 48
 
 }
+
 .material-symbols-outlined {
     font-variation-settings: 'FILL' 0,
     'wght' 400,
@@ -160,16 +163,13 @@ ul, ol {
     'opsz' 48
 
 }
+
 .material-symbols-outlined {
-    font-variation-settings:
-            'FILL' 0,
-            'wght' 400,
-            'GRAD' 0,
-            'opsz' 48
+    font-variation-settings: 'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
 }
-
-
-
 
 
 /*ESTILOS DE PRODUCTOS*/
@@ -211,13 +211,14 @@ ul, ol {
     display: block;
     margin: 10px 0;
 }
+
 .boton {
     transition-duration: 0.4s;
     font-size: 13px;
     text-align: center;
     background-color: white;
     color: black;
-    border:2px solid #555655;
+    border: 2px solid #555655;
     border-radius: 5px;
     padding: 5px 5px;
     position: center;
@@ -374,5 +375,92 @@ ul, ol {
     color: black;
     font-size: 16px;
     border-radius: 15px;
+}
+
+/*ESTILOS DE CADA PRODUCTOS*/
+.container-producto {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    width: 200%;
+
+}
+
+.producto {
+
+    border: 1px solid #ccc;
+    padding: 30px;
+    text-align: left;
+}
+
+
+.producto__img {
+    width: 50%;
+    height: 500px;
+    object-fit: cover;
+
+
+}
+
+.producto__title {
+
+    text-align: left;
+}
+
+.product__price {
+    color: #413f3f;
+    font-weight: bold;
+}
+
+.producto__icon {
+    display: block;
+    margin: 10px 0;
+}
+
+.boton-prod {
+    transition-duration: 0.4s;
+    font-size: 13px;
+    text-align: center;
+    background-color: white;
+    color: black;
+    border: 2px solid #555655;
+    border-radius: 5px;
+    padding: 5px 5px;
+    position: center;
+}
+
+.boton-prod:hover {
+    background-color: #565454;
+    color: white;
+}
+
+/*TABLA*/
+table {
+    width: 50%;
+    font-family: 'Nouse SIL', serif;
+
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+
+table#t01 tr:nth-child(even) {
+    background-color: #eee;
+}
+
+table#t01 tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+table#t01 th {
+    background-color: black;
+    color: white;
 }
 
