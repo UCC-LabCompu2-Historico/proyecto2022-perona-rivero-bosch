@@ -5,7 +5,7 @@
  * @param {string} valor - precio
  * @return
  */
-/*function add(producto, precio) {
+function add(producto, precio) {
     console.log(producto, precio);
 }
 function cargarMetodo(){
@@ -20,11 +20,11 @@ function cargarMetodo(){
 */
 
 
-/* metodo de entrega
+ metodo de entrega
 
 window.onload = function () {
 
-   /* Variables globales (por estar declaradas sin var)
+   /* Variables globales (por estar declaradas sin var)*/
 
     casillaDatos = document.getElementById('datos'); //Nodo donde vamos a mostrar los datos
 
