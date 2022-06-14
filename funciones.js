@@ -7,22 +7,44 @@
  */
 
 
+/*GUARDAR INICIAR SESION*/
+function guardar_local_storage(){
+    let email;
 
-function cargar_iniciar(){
-    var mail, urlComp;
+    email = document.getElementById("email").value;
 
-    mail=document.getElementById("email").value;
+    localStorage.setItem("emailLS", email);
 
+    window.open('index.html');
 
-    urlComp= "index.html#" + mail;
-    window.open(urlComp);
 }
 
-function cargarResultado_iniciar() {
-    var urlComp, email;
-    urlComp = window.location.href.split("/")[5];
+function cargar_local_storage() {
+    let email;
 
-    email = urlComp.split("#")[1];
-
-    document.getElementById("datos").value = email;
+    email = localStorage.getItem("emailLS");
+    document.getElementById("mail").value = email
 }
+
+/*GUARDAR PRODUCTOS*/
+function guardar_local_storage_productos(){
+    let title, precio;
+
+    title = document.getElementById("producto_title").value;
+    precio = document.getElementById("producto_price").value;
+    localStorage.setItem("titleLS", title);
+    localStorage.setItem("priceLS", precio);
+
+    window.open('pagar.html');
+
+}
+
+function cargar_local_storage_productos() {
+    let title, precio;
+
+    title = localStorage.getItem("titleLS");
+    precio = localStorage.getItem("precioLS");
+    document.getElementById("producto_title").value = title;
+    document.getElementById("producto_price").value = precio;
+}
+

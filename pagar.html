@@ -10,26 +10,29 @@
     <link rel="shortcut icon" href="imagenes/s.jpg">
     <link rel="stylesheet" href="estilo.css">
     <script type="text/javascript" src="funciones.js"></script>
-    <style>
-    </style>
 </head>
-<body class="body-num">
-<header>
+<body class="body-num" onload="cargar_local_storage_productos()" >
+
 <div id="pagar">
 
 
     <h1> DATOS DE LA COMPRA:</h1>
-    <input id="datos" type="text" name="imp_iniciar" disabled>
 
     <form>
+        <p>
+            Mail:
+            <input id="mail" type="text" name="imp_iniciar" disabled>
+        </p>
+        <p>
+            Producto:
+            <input id="title" type="text" name="imp_iniciar" disabled>
+        </p>
+        <p>
+            Precio:
+            <input id="price" type="text" name="imp_iniciar" disabled>
+        </p>
 
     </form>
 </div>
-
-
-
-
-</header>
-
 </body>
 </html>

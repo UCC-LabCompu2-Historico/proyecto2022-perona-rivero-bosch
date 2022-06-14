@@ -22,10 +22,8 @@
 
             <div class="producto">
                 <img src="imagenes/pantalon2.jpg" alt="" class="producto__img">
-
-
-                    <h3 class="producto__title">PANTALON RECTO</h3>
-                    <span class="product__price">10.590,00 ARS</span>
+                <h3 class="producto__title" id="producto_title">PANTALON RECTO</h3>
+                <span class="product__price" id="producto_price">10.590,00 ARS</span>
                 <p>
                 <p>Talle:</p>
                 <label for="34"> T34</label> <input type="radio" name="talle" value="34" id="34">
@@ -37,7 +35,7 @@
                 </p>
                 <table id="t01">
                     <tr>
-                        <th>Talle </th>
+                        <th>Talle</th>
                         <th>34</th>
                         <th>36</th>
                         <th>38</th>
@@ -79,9 +77,10 @@
                 </table>
 
 
-                <p><button class="boton-prod">comprar</button></p>
+                <p>
+                    <button onclick="guardar_local_storage_productos()" class="boton-prod">comprar</button>
+                </p>
             </div>
-
 
 
         </section>
