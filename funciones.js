@@ -5,73 +5,44 @@
  * @param {string} valor - precio
  * @return
  */
-function add(producto, precio) {
-    console.log(producto, precio);
+
+function guardar_local_storage_iniciar(){
+    var mail, contra;
+
+    mail = document.getElementById("email").value;
+    contra = document.getElementById("contraseña").value;
+
+    localStorage.setItem("emailLS", mail);
+    localStorage.setItem("contraseñaLS", contra);
+
+    window.open('pagar.html');
+
 }
-function cargarMetodo(){
-    var pago, entrega, urlComp;
 
-    pago=document.getElementsByName("pago").value;
-    entrega=document.getElementsByName("entrega").value;
+function cargar_local_storage_iniciar(){
+    var mail, contra;
 
-    urlComp= "pagar.html#" + pago + "#" + entrega;
+    mail = localStorage.getItem("emailLS");
+    contra = localStorage.getItem("contraseñaLS");
+
+    document.getElementById("datos_compra").value = mail;
+}
+
+function cargar_iniciar(){
+    var mail, urlComp;
+
+    mail=document.getElementById("email").value;
+
+
+    urlComp= "index.html#" + mail;
     window.open(urlComp);
 }
-*/
 
+function cargarResultado_iniciar() {
+    var urlComp, email;
+    urlComp = window.location.href.split("/")[5];
 
- metodo de entrega
+    email = urlComp.split("#")[1];
 
-window.onload = function () {
-
-   /* Variables globales (por estar declaradas sin var)*/
-
-    casillaDatos = document.getElementById('datos'); //Nodo donde vamos a mostrar los datos
-
-
-    radioButTrat = document.getElementsByName("entrega");//Nodos radio buttons
-
-    checkboxElements = new Array();
-
-
-
-    var elementosDelForm = document.getElementsByName('entrega'); //Elementos input
-
-
-    for(var i=0; i<elementosDelForm.length;i++) {
-
-        if (elementosDelForm[i].type == 'radio') {elementosDelForm[i].addEventListener("click", actualizarDatos);}
-
-        else {elementosDelForm[i].addEventListener("change", actualizarDatos);}
-
-        if (elementosDelForm[i].type == 'checkbox') {checkboxElements.push(elementosDelForm[i]);}
-
-    }
-
-    for (var i=0; i<elementosSelect.length;i++) {elementosSelect[i].addEventListener("change", actualizarDatos);}
-
-}
-
-
-
-function actualizarDatos() {
-
-
-    var radioButSelValue = '';
-
-    for (var i=0; i<radioButTrat.length; i++) {if (radioButTrat[i].checked == true) { radioButSelValue= radioButTrat[i].value;} }
-
-
-    var checkBoxSel = new Array();
-
-    for (var i=0; i<checkboxElements.length;i++) {
-
-        if (checkboxElements[i].checked ==true) {checkBoxSel.push(checkboxElements[i].name);}
-
-    }
-
-
-
-        casillaDatos.innerHTML='<h4> Datos de la compra: </h4><p>Metodo de entrega: '+(radioButSelValue||' --- ')+'</p>';
-
+    document.getElementById("datos").value = email;
 }
