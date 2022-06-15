@@ -1,9 +1,14 @@
 /**
- * Conversion de Unidades, de metros, yardas, pies y pulgadas
- * @method cambiarUnidades
- * @param {string} id - producto
- * @param {string} valor - precio
- * @return
+ * guarda valores iniciar sesion
+ * @method guardar_local_storage_iniciar
+ */
+/**
+ * guarda valores productos
+ * @method guardar_local_storage
+ */
+/**
+ * muestra valores cargados
+ * @method cargar_local_storage
  */
 
 
@@ -51,9 +56,6 @@ function cargar_local_storage() {
 }
 
 /*VALIDACION*/
-var Email = document.getElementById("email");
-var Contra = document.getElementById("contraseña");
-
 
 function validarEmail(valor) {
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/.test(valor)){
