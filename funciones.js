@@ -13,7 +13,7 @@
 
 
 /*GUARDAR INICIAR SESION*/
-function guardar_local_storage_iniciar(){
+function guardar_local_storage_iniciar() {
 
     let email;
 
@@ -24,8 +24,9 @@ function guardar_local_storage_iniciar(){
 
 }
 
+
 /*GUARDAR PRODUCTOS*/
-function guardar_local_storage(){
+function guardar_local_storage() {
     let unidad1, unidad2, unidad3;
 
     unidad1 = document.getElementsByName("unidades1")[0].value;
@@ -41,12 +42,12 @@ function guardar_local_storage(){
 }
 
 function cargar_local_storage() {
-    let unidad1, unidad2, unidad3,email;
+    let unidad1, unidad2, unidad3, email;
 
     unidad1 = localStorage.getItem("unidad1LS");
     unidad2 = localStorage.getItem("unidad2LS");
     unidad3 = localStorage.getItem("unidad3LS");
-    email= localStorage.getItem("emailLS");
+    email = localStorage.getItem("emailLS");
 
     document.getElementById("dist1").value = unidad1
     document.getElementById("dist2").value = unidad2
@@ -58,7 +59,7 @@ function cargar_local_storage() {
 /*VALIDACION*/
 
 function validarEmail(valor) {
-    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/.test(valor)){
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/.test(valor)) {
         return 1;
     } else {
         return 0;
