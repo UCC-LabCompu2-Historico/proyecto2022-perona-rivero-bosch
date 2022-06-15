@@ -214,13 +214,13 @@ ul, ol {
 
 .boton {
     transition-duration: 0.4s;
-    font-size: 13px;
+    font-size: 20px;
     text-align: center;
     background-color: white;
     color: black;
     border: 2px solid #555655;
-    border-radius: 5px;
-    padding: 5px 5px;
+    border-radius: 10px;
+    padding: 20px 20px;
     position: center;
 }
 

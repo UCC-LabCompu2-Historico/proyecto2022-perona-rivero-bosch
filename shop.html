@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="estilo.css">
   <script type="text/javascript" src="funciones.js"></script>
   <link rel="shortcut icon" href="imagenes/s.jpg">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
 
 
 </head>
@@ -27,9 +27,22 @@
           <h3 class="product__title">PANTALON RECTO</h3>
           <span class="producto__price">10.590,00 ARS</span>
         </div>
-        <p> <a href="pantalon1.html"><button class="button" ><i class=" product__icon fa-solid fa-cart-plus"></i></button></a></p>
-        <button class="boton">comprar</button>
+
+        <p>
+          <label for="unidades1"></label>
+          <select name="unidades1" id="unidades1">
+            <option value="1_pantalon_corto">1</option>
+            <option value="2_pantalon_corto">2</option>
+            <option value="3_pantalon_corto">3</option>
+            <option value="4_pantalon_corto">4</option>
+          </select>
+          <button onclick="guardar_local_storage()" class="boton" >comprar</button>
+        </p>
+
       </div>
+
+
+
       <div class="product">
         <img src="imagenes/pantalon3.jpg" alt="" class="product__img">
 
@@ -37,9 +50,20 @@
           <h3 class="product__title">PANTALON NARANJA</h3>
           <span class="producto__price">9.590,00 ARS</span>
         </div>
-        <p> <button class="button" ><i class=" product__icon fa-solid fa-cart-plus"></i></button></p>
-        <button class="boton">comprar</button>
+        <p>
+          <label for="unidades2"></label>
+          <select name="unidades2" id="unidades2">
+            <option value="1_pantalon_naranja">1</option>
+            <option value="2_pantalon_naranja">2</option>
+            <option value="3_pantalon_naranja">3</option>
+            <option value="4_pantalon_naranja">4</option>
+          </select>
+          <button onclick="guardar_local_storage()" class="boton" >comprar</button>
+        </p>
+
       </div>
+
+
       <div class="product">
         <img src="imagenes/pantalon1.jpg" alt="" class="product__img">
 
@@ -47,8 +71,18 @@
           <h3 class="product__title">JEAN</h3>
           <span class="producto__price">9.590,00 ARS</span>
         </div>
-        <p> <button class="button" ><i class=" product__icon fa-solid fa-cart-plus"></i></button></p>
-        <button class="boton">comprar</button>
+        <p>
+          <label for="unidades3"></label>
+          <select name="unidades3" id="unidades3">
+            <option value="1_pantalon_jean">1</option>
+            <option value="2_pantalon_jean">2</option>
+            <option value="3_pantalon_jean">3</option>
+            <option value="4_pantalon_jean">4</option>
+          </select>
+          <button onclick="guardar_local_storage()" class="boton" >comprar</button>
+        </p>
+
+
       </div>
 
     </section>
