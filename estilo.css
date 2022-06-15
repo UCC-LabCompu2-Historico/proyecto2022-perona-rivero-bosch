@@ -435,7 +435,7 @@ ul, ol {
 }
 
 
-/*PAGAR
+/*PAGAR*/
 #pagar {
     width: 500px;
     height: 420px;
@@ -448,4 +448,4 @@ ul, ol {
     box-sizing: border-box;
     padding: 20px 20px;
     border-radius: 10%;
-}*/
+}

@@ -66,7 +66,14 @@ function validarEmail(valor) {
     }
 }
 
+
+
+
 /*CANVAS*/
 
 
-
+let canvas = document.getElementById("myCanvas");
+let ctx = canvas.getContext("2d");
+ctx.font="10pt Verdana";
+ctx.fillStyle = "blue";
+ctx.fillText( "Gracias por la Compra!!!", canvas.width/2, canvas.height/2);
