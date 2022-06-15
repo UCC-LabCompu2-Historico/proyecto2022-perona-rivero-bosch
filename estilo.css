@@ -244,6 +244,7 @@ ul, ol {
 }
 
 
+
 /*INICIAR SESION*/
 #iniciar {
     width: 320px;
@@ -434,33 +435,18 @@ ul, ol {
     color: white;
 }
 
-/*TABLA*/
-table {
-    width: 50%;
-    font-family: 'Nouse SIL', serif;
 
-}
-
-table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-}
-
-th, td {
-    padding: 5px;
-    text-align: left;
-}
-
-table#t01 tr:nth-child(even) {
-    background-color: #eee;
-}
-
-table#t01 tr:nth-child(odd) {
-    background-color: #fff;
-}
-
-table#t01 th {
-    background-color: black;
+/*PAGAR*/
+#pagar {
+    width: 500px;
+    height: 420px;
+    background: black;
     color: white;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 20px 20px;
+    border-radius: 10%;
 }
-

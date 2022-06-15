@@ -13,19 +13,25 @@
 </head>
 <body class="body-num" onload="cargar_local_storage()" >
 
-<div id="pagar">
+<div  id="pagar">
 
 
     <h1> DATOS DE LA COMPRA:</h1>
 
     <form>
         <p>
+            Mail:
+        <p><input id="email" type="text" name="imp_email" disabled></p>
+
+        <p>
            Cantidad de Prendas:
         <p><input id="dist1" type="text" name="imp_dist" disabled></p>
         <p><input id="dist2" type="text" name="imp_dist" disabled></p>
         <p><input id="dist3" type="text" name="imp_dist" disabled></p>
-        </p>
+
     </form>
+    <button onclick="alert ('SE REALIZO LA COMPRA CON EXITO')" class="boton">Finalizar Compra</button>
+
 </div>
 </body>
 </html>
