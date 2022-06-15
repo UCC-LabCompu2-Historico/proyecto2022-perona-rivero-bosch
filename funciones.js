@@ -9,6 +9,7 @@
 
 /*GUARDAR INICIAR SESION*/
 function guardar_local_storage_iniciar(){
+
     let email;
 
     email = document.getElementById("email").value;
@@ -48,3 +49,17 @@ function cargar_local_storage() {
     document.getElementById("email").value = email
 
 }
+
+/*VALIDACION*/
+var Email = document.getElementById("email");
+var Contra = document.getElementById("contraseña");
+
+
+function validarEmail(valor) {
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/.test(valor)){
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
