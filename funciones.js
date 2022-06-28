@@ -1,79 +1,289 @@
+
+
+
+/* CANVASSS*/
 /**
- * guarda valores iniciar sesion
- * @method guardar_local_storage_iniciar
+ * Dibujar en Canvas la factura
+ * @method DibujarFact
+ * @return voidFunction
  */
-/**
- * guarda valores productos
- * @method guardar_local_storage
- */
-/**
- * muestra valores cargados
- * @method cargar_local_storage
- */
+let total = 0;
+
+function DibujarFact() {
+
+    let i = document.getElementsByName("geTurno")[0].value;
+    let cont = document.getElementsByName("geTurno")[0].value = Number(i) + 1;
+    let canvas = document.getElementById('canvasdibujar');
+    let ser = canvas.getContext("2d");
+    let ctx = canvas.getContext("2d");
+
+    let x = document.getElementById('unidades1').value;
+    let precio = calcularPrecio(x);
 
 
-/*GUARDAR INICIAR SESION*/
-function guardar_local_storage_iniciar() {
+    const value = document.getElementById('unidades1').value;
+    let option = document.getElementById('unidades1').querySelector(`option[value="${value}"]`);
+    option.disabled = true;
+    document.getElementById('unidades1').value = "";
 
-    let email;
+    total += precio;
+    ser.fillStyle = "#ffffff";
+    ser.fillRect(555, 390, 100, 18);
 
-    email = document.getElementById("email").value;
-    localStorage.setItem("emailLS", email);
+    ser.fillStyle = "#ffffff";
+    ser.fillRect(10, 413, 648, 45);
 
-    window.open('index.html');
+    ctx.font = "12pt Sin Serif";
+    ctx.fillStyle = "black";
+
+
+    let mail = document.getElementById("email").value;
+    ctx.fillText(mail, 220, 450);
+
+    ctx.font = "13pt Sin Serif";
+    ctx.fillStyle = "black";
+
+    switch (cont) {
+        case 1:
+
+            ctx.fillText(x, 12, 100);
+            ctx.fillText(precio, 555, 100);
+
+
+            break;
+        case 2:
+            ctx.fillText(x, 12, 120);
+            ctx.fillText(precio, 555, 120);
+
+            break;
+        case 3:
+            ctx.fillText(x, 12, 140);
+            ctx.fillText(precio, 555, 140);
+            break;
+        default:
+            total = total - precio;
+
+    }
+
+
+
+    ctx.fillText(total, 555, 403);
+    document.getElementById('unidades1').option.setAttribute("disabled", "disabled");
+
 
 }
 
 
-/*GUARDAR PRODUCTOS*/
-function guardar_local_storage() {
-    let unidad1, unidad2, unidad3;
+/**
+ * Cargar fondo del Canvas
+ * @method cargarCanvas
+ * @return VoidFunction
+ */
+function cargarCan() {
+    let canvas = document.getElementById('canvasdibujar');
+    let ctx = canvas.getContext("2d");
+    let fondo = new Image();
+    fondo.src = "Imagenes/factura.png";
+    ctx.drawImage(fondo, 0, 0);
+    fondo.onload = function () {
+        ctx.drawImage(fondo, 0, 0)
+    };
+    let canvas2 = document.getElementById('canvasanima');
+    let ctx2 = canvas2.getContext("2d");
 
-    unidad1 = document.getElementsByName("unidades1")[0].value;
-    unidad2 = document.getElementsByName("unidades2")[0].value;
-    unidad3 = document.getElementsByName("unidades3")[0].value;
-
-    localStorage.setItem("unidad1LS", unidad1);
-    localStorage.setItem("unidad2LS", unidad2);
-    localStorage.setItem("unidad3LS", unidad3);
-
-    window.open('pagar.html');
-
-}
-
-function cargar_local_storage() {
-    let unidad1, unidad2, unidad3, email;
-
-    unidad1 = localStorage.getItem("unidad1LS");
-    unidad2 = localStorage.getItem("unidad2LS");
-    unidad3 = localStorage.getItem("unidad3LS");
-    email = localStorage.getItem("emailLS");
-
-    document.getElementById("dist1").value = unidad1
-    document.getElementById("dist2").value = unidad2
-    document.getElementById("dist3").value = unidad3
-    document.getElementById("email").value = email
+    ctx2.fillStyle = "#ffffff";
+    ctx2.fillRect(0, 0, 666, 50);
+    fondo2.onload = function () {
+        ctx2.drawImage(fondo2, 0, 0)
+    };
 
 }
 
-/*VALIDACION*/
 
-function validarEmail(valor) {
-    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/.test(valor)) {
-        return 1;
+
+
+/**
+ * Mostrar en pantalla el precio segun la opcion elegida
+ * @method calcularPrecio
+ * @return Precio
+ * @param host
+ */
+function calcularPrecio(host) {
+    switch (host) {
+        case "1_pantalon_corto":
+            return 10590;
+        case "2_pantalon_corto":
+            return (10.590*2);
+        case "3_pantalon_corto":
+            return (10.590*3);
+        case "4_pantalon_corto":
+            return (10.590*4);
+        case "1_pantalon_naranja":
+            return 9590;
+        case "2_pantalon_naranja":
+            return 9590*2;
+        case "3_pantalon_naranja":
+            return 9590*3;
+        case "4_pantalon_naranja":
+            return 9590*4;
+        case "1_pantalon_jean":
+            return 9700;
+        case "2_pantalon_jean":
+            return 9700*2;
+        case "3_pantalon_jean":
+            return 9700*3;
+        case "4_pantalon_jean":
+            return 9700*4;
+
+    }
+
+}
+
+
+/**
+ * Verificador de datos completados
+ * @method pedirTurno
+ * @return void
+ */
+function pedirTurno() {
+
+
+    let email = document.getElementById('email').value;
+    let contra = document.getElementById('contraseña'.value);
+    if (contra === "" || email === "" ) {
+        alert("Por favor completar todo el formulario antes de iniciar sesion");
     } else {
-        return 0;
+        animar();
+
+        document.getElementById('input_email').value = "";
+
     }
 }
 
+/**
+ * Comprueba que el usuario, contraseña y mail sean validos
+ * @method check
+ * @return Precio
+ * @param e
+ */
+function check(e) {
+    const patronL = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const patronD = patronL + "+-_.0123456789@";
+
+    let auxN = 0;
+    let auxA = 0;
+    let auxAr = 0;
+    let auxD = 0;
+    let auxP = 0;
+    let auxC = 0;
+    switch (e) {
+        case "usuario":
+            let nombre = document.getElementById('usuario').value;
+            let sizen = document.getElementById('usuario').value.length;
+            for (let i = 0; i < sizen; i++) {
+                for (let j = 0; j < patronL.length; j++) {
+                    if (nombre[i] === patronL[j]) {
+                        auxN++;
+                    }
+                }
+            }
+            if (auxN !== nombre.length) {
+                alert("Ingrese un usuario valido");
+                document.getElementById('usuario').value = "";
+            }
+            break;
+        case "contraseña":
+            let size = document.getElementById('contraseña').value.length;
+            let ape = document.getElementById('contraseña').value;
+            for (let i = 0; i < size; i++) {
+                for (let j = 0; j < patronL.length; j++) {
+                    if (ape[i] === patronL[j]) {
+                        auxA++;
+                    }
+                }
+            }
+            if (auxA !== ape.length) {
+                alert("Ingrese contraseña valida");
+                document.getElementById('contraseña').value = "";
+            }
+            break;
+        case "email":
+            let email = document.getElementById('email').value;
+            let sizee = document.getElementById('email').value.length;
+            for (let i = 0; i < sizee; i++) {
+                for (let j = 0; j < patronD.length; j++) {
+                    if (email[i] === patronD[j]) {
+                        auxD++;
+                    }
+                }
+                if (email[i] === "@") {
+                    auxAr++;
+                }
+                if (email[i] === ".") {
+                    auxP++;
+                }
+
+            }
+            if (auxD !== email.length || auxAr !== 1 || auxP < 1) {
+                alert("Ingrese un email valido");
+                document.getElementById('email').value = "";
+            }
+            break;
+        case "confirmar_contraseña":
+            let nomb = document.getElementById('confirmar_contraseña').value;
+            let siz = document.getElementById('confirmar_contraseña').value.length;
+            for (let i = 0; i < siz; i++) {
+                for (let j = 0; j < patronL.length; j++) {
+                    if (nomb[i] === patronL[j]) {
+                        auxC++;
+                    }
+                }
+            }
+            if (auxN !== nomb.length) {
+                alert("Ingrese contraseña valido");
+                document.getElementById('confirmar_contraseña').value = "";
+            }
+            break;
+
+    }
+}
+
+/**
+ * Setea el intervalo de tiempo llamando a la funcion canvascargando
+ * @method animar
+ * @return void
+ * @param onload
+ */
+var posicionX = 5;
+
+function animar() {
+    setInterval("canvascargando(),100")
+}
+
+/**
+ * Dibuja una linea que simula la carga de datos
+ * @method canvascargando
+ * @return void
+ */
+function canvascargando() {
+    let contexto = document.getElementById('canvasanima').getContext("2d");
+    contexto.fillStyle = "#ca7702";
+    contexto.fillRect(posicionX, 5, 40, 40);
+    if (posicionX > 655) {
+        contexto.fillStyle = "#ffffff";
+        contexto.fillRect(0, 0, 666, 50);
+        contexto.font = "24pt Sin Serif";
+        contexto.fillStyle = 'black';
+        var string = "Se ha pedido el turno!"
+        contexto.fillText(string, 200, 35)
+    }
+    if (posicionX > 755) {
+        window.location.reload();
+        alert("Se ha solicitado el turno");
 
 
+    }
+    posicionX = 10 + posicionX;
 
-/*CANVAS*/
 
-
-let canvas = document.getElementById("myCanvas");
-let ctx = canvas.getContext("2d");
-ctx.font="10pt Verdana";
-ctx.fillStyle = "blue";
-ctx.fillText( "Gracias por la Compra!!!", canvas.width/2, canvas.height/2);
+}

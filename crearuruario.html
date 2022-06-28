@@ -22,13 +22,15 @@
         <h1>INICIAR SESION:</h1>
         <form>
             <p><label for="email">Email:</label><input type="email" name="email" placeholder="email@dominio.com"
-                                                       id="email"></p>
+                                                       id="email" onchange="check(this.id)" ></p>
             <p><label for="contraseña">Contraseña:</label><input type="password" name="psw" placeholder="password"
-                                                                 id="contraseña"></p>
+                                                                 id="contraseña" onchange="check(this.id)"></p>
 
             <p>
 
-                <button onclick="guardar_local_storage_iniciar(), validarEmail()">iniciar sesion</button>
+            <div>
+                <button class="boton" id="peTurno" onclick="pedirTurno()">INICIAR SESION</button>
+            </div>
 
             </p>
             <a href="registrar.html"> Registrarme </a>

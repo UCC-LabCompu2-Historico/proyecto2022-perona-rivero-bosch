@@ -13,7 +13,7 @@
 
 
 </head>
-<body>
+<body id="CalendarioBody" onload="cargarCan()">
 <main class="main">
     <div class="container">
         <h2 class="main-title">PANTALONES:</h2>
@@ -36,7 +36,7 @@
                         <option value="3_pantalon_corto">3</option>
                         <option value="4_pantalon_corto">4</option>
                     </select>
-                    <button onclick="guardar_local_storage()" class="boton">comprar</button>
+
                 </p>
 
             </div>
@@ -58,7 +58,7 @@
                         <option value="3_pantalon_naranja">3</option>
                         <option value="4_pantalon_naranja">4</option>
                     </select>
-                    <button onclick="guardar_local_storage()" class="boton">comprar</button>
+
                 </p>
 
             </div>
@@ -69,7 +69,7 @@
 
                 <div class="product__description">
                     <h3 class="product__title">JEAN</h3>
-                    <span class="producto__price">9.590,00 ARS</span>
+                    <span class="producto__price">9.700,00 ARS</span>
                 </div>
                 <p>
                     <label for="unidades3"></label>
@@ -80,7 +80,7 @@
                         <option value="3_pantalon_jean">3</option>
                         <option value="4_pantalon_jean">4</option>
                     </select>
-                    <button onclick="guardar_local_storage()" class="boton">comprar</button>
+
                 </p>
 
 
@@ -88,6 +88,7 @@
 
         </section>
     </div>
+
 </main>
 
 <main class="main">
@@ -102,8 +103,20 @@
                     <h3 class="product__title">SHORT JEAN</h3>
                     <span class="producto__price">5.590,00 ARS</span>
                 </div>
-                <button class="boton">comprar</button>
+                <p>
+                    <label for="uni1"></label>
+                    <select name="uni1" id="uni1">
+                        <option value="ninguno">0</option>
+                        <option value="1_short_jean">1</option>
+                        <option value="2_short_jean">2</option>
+                        <option value="3_short_jean">3</option>
+                        <option value="4_short_jean">4</option>
+                    </select>
+
+                </p>
+
             </div>
+
             <div class="product">
                 <img src="imagenes/short2.jpg" alt="" class="product__img">
 
@@ -111,8 +124,22 @@
                     <h3 class="product__title">SHORT VERDE</h3>
                     <span class="producto__price">6.590,00 ARS</span>
                 </div>
-                <button class="boton">comprar</button>
+                <p>
+                    <label for="uni2"></label>
+                    <select name="uni2" id="uni2">
+                        <option value="ninguno">0</option>
+                        <option value="1_short_verde">1</option>
+                        <option value="2_short_verde">2</option>
+                        <option value="3_short_verde">3</option>
+                        <option value="4_short_verde">4</option>
+                    </select>
+
+                </p>
+
+
             </div>
+
+
             <div class="product">
                 <img src="imagenes/short3.jpg" alt="" class="product__img">
 
@@ -120,7 +147,19 @@
                     <h3 class="product__title">SHORT JEAN OSCURO</h3>
                     <span class="producto__price">5.590,00 ARS</span>
                 </div>
-                <button class="boton">comprar</button>
+
+                <p>
+                    <label for="uni3"></label>
+                    <select name="uni3" id="uni3">
+                        <option value="ninguno">0</option>
+                        <option value="1_short_oscuro">1</option>
+                        <option value="2_short_oscuro">2</option>
+                        <option value="3_short_oscuro">3</option>
+                        <option value="4_short_oscuro">4</option>
+                    </select>
+
+                </p>
+
             </div>
 
         </section>
@@ -139,8 +178,10 @@
                     <h3 class="product__title">REMERA ROSA</h3>
                     <span class="producto__price">4.590,00 ARS</span>
                 </div>
-                <button class="boton">comprar</button>
+
             </div>
+
+
             <div class="product">
                 <img src="imagenes/remera2.jpg" alt="" class="product__img">
 
@@ -148,8 +189,8 @@
                     <h3 class="product__title">REMERA BORDADA</h3>
                     <span class="producto__price">5.590,00 ARS</span>
                 </div>
-                <button class="boton">comprar</button>
             </div>
+
             <div class="product">
                 <img src="imagenes/remera3.jpg" alt="" class="product__img">
 
@@ -157,7 +198,6 @@
                     <h3 class="product__title">REMERA</h3>
                     <span class="producto__price">5.590,00 ARS</span>
                 </div>
-                <button class="boton">comprar</button>
             </div>
 
         </section>
@@ -176,7 +216,7 @@
                     <h3 class="product__title">CROP TOP NEGRO</h3>
                     <span class="producto__price">2.590,00 ARS</span>
                 </div>
-                <button class="boton">comprar</button>
+
             </div>
             <div class="product">
                 <img src="imagenes/top2.jpg" alt="" class="product__img">
@@ -185,7 +225,7 @@
                     <h3 class="product__title">CROP TOP BLANCO</h3>
                     <span class="producto__price">3.590,00 ARS</span>
                 </div>
-                <button class="boton">comprar</button>
+
             </div>
             <div class="product">
                 <img src="imagenes/top3.jpg" alt="" class="product__img">
@@ -194,12 +234,23 @@
                     <h3 class="product__title">CROP TOP NEGRO</h3>
                     <span class="producto__price">3.590,00 ARS</span>
                 </div>
-                <button class="boton">comprar</button>
             </div>
 
         </section>
     </div>
+    <button class="boton" id="geTurno" name="geTurno" onclick="DibujarFact()" type="submit"
+            value=0>Generar
+        Factura
+    </button>
 </main>
 <a href="index.html"> Pagina Principal </a>
+
+<canvas id="canvasdibujar" width="666px" height="466px" style="border:1px solid#D3D3D3">
+    Tu navegador no soporta el tag de HTML5 canvas.
+</canvas>
+<canvas id="canvasanima" width="666px" height="50px" style="border:1px solid#D3D3D3">
+    Tu navegador no soporta el tag de HTML5 canvas.
+</canvas>
+
 </body>
 </html>
