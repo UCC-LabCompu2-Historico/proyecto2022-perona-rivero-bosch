@@ -49,16 +49,10 @@ function DibujarFact3() {
     }
 
 
-
-
-
-    ctx.fillText(total3+total+total2, 555, 403);
+    ctx.fillText(total3 + total + total2, 555, 403);
     document.getElementById('unidades3').option.setAttribute("disabled", "disabled");
 
 }
-
-
-
 
 
 /**
@@ -112,7 +106,7 @@ function DibujarFact2() {
     }
 
 
-    ctx.fillText(total3+total+total2, 555, 403);
+    ctx.fillText(total3 + total + total2, 555, 403);
     document.getElementById('unidades2').option.setAttribute("disabled", "disabled");
 
 
@@ -170,7 +164,7 @@ function DibujarFact() {
     }
 
 
-    ctx.fillText(total3+total+total2, 555, 403);
+    ctx.fillText(total3 + total + total2, 555, 403);
     document.getElementById('unidades1').option.setAttribute("disabled", "disabled");
 
 
