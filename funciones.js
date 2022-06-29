@@ -1,5 +1,125 @@
 
 
+/**
+ * Dibujar en Canvas la factura
+ * @method DibujarFact
+ * @return voidFunction
+ */
+let total3 = 0;
+
+function DibujarFact3() {
+
+    let i3 = document.getElementsByName("geTurno3")[0].value;
+    let cont3 = document.getElementsByName("geTurno3")[0].value = Number(i3) + 1;
+    let canvas = document.getElementById('canvasdibujar');
+    let ser = canvas.getContext("2d");
+    let ctx = canvas.getContext("2d");
+
+    let x = document.getElementById('unidades3').value;
+    let precio3 = calcularPrecio(x);
+
+
+    const value = document.getElementById('unidades3').value;
+    let option = document.getElementById('unidades3').querySelector(`option[value="${value}"]`);
+    option.disabled = true;
+    document.getElementById('unidades2').value = "";
+
+    total3 += precio3;
+    ser.fillStyle = "#ffffff";
+    ser.fillRect(555, 390, 100, 18);
+
+    ser.fillStyle = "#ffffff";
+    ser.fillRect(10, 413, 648, 45);
+
+    ctx.font = "12pt Sin Serif";
+    ctx.fillStyle = "black";
+
+
+    ctx.font = "13pt Sin Serif";
+    ctx.fillStyle = "black";
+
+    switch (cont3) {
+        case 1:
+
+            ctx.fillText(x, 12, 140);
+            ctx.fillText(precio3, 555, 140);
+            break;
+        default:
+            alert("Elegir una opcion");
+            total3 = total3 - precio3;
+
+    }
+
+
+   /* ctx.fillText(total3, 555, 403);
+    document.getElementById('unidades3').option.setAttribute("disabled", "disabled");*/
+
+
+}
+
+
+
+
+
+
+
+/**
+ * Dibujar en Canvas la factura
+ * @method DibujarFact
+ * @return voidFunction
+ */
+let total2 = 0;
+
+function DibujarFact2() {
+
+    let i2 = document.getElementsByName("geTurno2")[0].value;
+    let cont2 = document.getElementsByName("geTurno2")[0].value = Number(i2) + 1;
+    let canvas = document.getElementById('canvasdibujar');
+    let ser = canvas.getContext("2d");
+    let ctx = canvas.getContext("2d");
+
+    let x = document.getElementById('unidades2').value;
+    let precio2 = calcularPrecio(x);
+
+
+    const value = document.getElementById('unidades2').value;
+    let option = document.getElementById('unidades2').querySelector(`option[value="${value}"]`);
+    option.disabled = true;
+    document.getElementById('unidades2').value = "";
+
+    total2 += precio2;
+    ser.fillStyle = "#ffffff";
+    ser.fillRect(555, 390, 100, 18);
+
+    ser.fillStyle = "#ffffff";
+    ser.fillRect(10, 413, 648, 45);
+
+    ctx.font = "12pt Sin Serif";
+    ctx.fillStyle = "black";
+
+
+    ctx.font = "13pt Sin Serif";
+    ctx.fillStyle = "black";
+
+    switch (cont2) {
+        case 1:
+
+            ctx.fillText(x, 12, 120);
+            ctx.fillText(precio2, 555, 120);
+            break;
+        default:
+            alert("Elegir una opcion");
+            total2 = total2 - precio2;
+
+    }
+
+
+    /*ctx.fillText(total2, 555, 403);
+    document.getElementById('unidades2').option.setAttribute("disabled", "disabled");*/
+
+
+}
+
 
 /**
  * Dibujar en Canvas la factura
@@ -20,7 +140,6 @@ function DibujarFact() {
     let precio = calcularPrecio(x);
 
 
-
     const value = document.getElementById('unidades1').value;
     let option = document.getElementById('unidades1').querySelector(`option[value="${value}"]`);
     option.disabled = true;
@@ -37,7 +156,6 @@ function DibujarFact() {
     ctx.fillStyle = "black";
 
 
-
     ctx.font = "13pt Sin Serif";
     ctx.fillStyle = "black";
 
@@ -46,8 +164,6 @@ function DibujarFact() {
 
             ctx.fillText(x, 12, 100);
             ctx.fillText(precio, 555, 100);
-
-
             break;
         default:
             alert("Elegir una opcion");
@@ -56,14 +172,11 @@ function DibujarFact() {
     }
 
 
-
-    ctx.fillText(total, 555, 403);
-    document.getElementById('unidades1').option.setAttribute("disabled", "disabled");
+    /*ctx.fillText(total, 555, 403);
+    document.getElementById('unidades1').option.setAttribute("disabled", "disabled");*/
 
 
 }
-
-
 
 
 /**
@@ -96,7 +209,7 @@ function cargarCan() {
  * @method calcularPrecio
  * @return Precio
  * @param host
-*/
+ */
 function calcularPrecio(host) {
     switch (host) {
         case "ninguno":
@@ -109,26 +222,24 @@ function calcularPrecio(host) {
             return (10590 * 3);
         case "4_pantalon_corto":
             return (10590 * 4);
-
-            /*case "1_pantalon_naranja":
-        return 9590;
-    case "2_pantalon_naranja":
-        return 9590*2;
-    case "3_pantalon_naranja":
-        return 9590*3;
-    case "4_pantalon_naranja":
-        return 9590*4;
-        /*
-    case "1_pantalon_jean":
-        return 9700;
-    case "2_pantalon_jean":
-        return 9700*2;
-    case "3_pantalon_jean":
-        return 9700*3;
-    case "4_pantalon_jean":
-        return 9700*4;*/
-    }}
-
+        case "1_pantalon_naranja":
+            return 9590;
+        case "2_pantalon_naranja":
+            return 9590 * 2;
+        case "3_pantalon_naranja":
+            return 9590 * 3;
+        case "4_pantalon_naranja":
+            return 9590 * 4;
+        case "1_pantalon_jean":
+            return 9700;
+        case "2_pantalon_jean":
+            return 9700 * 2;
+        case "3_pantalon_jean":
+            return 9700 * 3;
+        case "4_pantalon_jean":
+            return 9700 * 4;
+    }
+}
 
 
 /**
@@ -141,7 +252,7 @@ function pedirTurno() {
 
     let email = document.getElementById('email').value;
     let contra = document.getElementById('contraseña'.value);
-    if (contra === "" || email === "" ) {
+    if (contra === "" || email === "") {
         alert("Por favor completar todo el formulario antes de iniciar sesion");
     } else {
         animar();
@@ -289,3 +400,4 @@ function canvascargando() {
 function show() {
     alert("La compra fue realizada con exito!!");
 }
+
