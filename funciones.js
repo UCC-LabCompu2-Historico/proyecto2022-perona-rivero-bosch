@@ -1,5 +1,3 @@
-
-
 /**
  * Dibujar en Canvas la factura
  * @method DibujarFact
@@ -22,7 +20,7 @@ function DibujarFact3() {
     const value = document.getElementById('unidades3').value;
     let option = document.getElementById('unidades3').querySelector(`option[value="${value}"]`);
     option.disabled = true;
-    document.getElementById('unidades2').value = "";
+    document.getElementById('unidades3').value = "";
 
     total3 += precio3;
     ser.fillStyle = "#ffffff";
@@ -51,13 +49,13 @@ function DibujarFact3() {
     }
 
 
-   /* ctx.fillText(total3, 555, 403);
-    document.getElementById('unidades3').option.setAttribute("disabled", "disabled");*/
 
+
+
+    ctx.fillText(total3+total+total2, 555, 403);
+    document.getElementById('unidades3').option.setAttribute("disabled", "disabled");
 
 }
-
-
 
 
 
@@ -114,8 +112,8 @@ function DibujarFact2() {
     }
 
 
-    /*ctx.fillText(total2, 555, 403);
-    document.getElementById('unidades2').option.setAttribute("disabled", "disabled");*/
+    ctx.fillText(total3+total+total2, 555, 403);
+    document.getElementById('unidades2').option.setAttribute("disabled", "disabled");
 
 
 }
@@ -172,8 +170,8 @@ function DibujarFact() {
     }
 
 
-    /*ctx.fillText(total, 555, 403);
-    document.getElementById('unidades1').option.setAttribute("disabled", "disabled");*/
+    ctx.fillText(total3+total+total2, 555, 403);
+    document.getElementById('unidades1').option.setAttribute("disabled", "disabled");
 
 
 }
