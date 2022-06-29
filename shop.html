@@ -14,7 +14,8 @@
 
 </head>
 <body id="CalendarioBody" onload="cargarCan()">
-<main class="main">
+
+<main class="main" >
     <div class="container">
         <h2 class="main-title">PANTALONES:</h2>
         <section class="container-products">
@@ -27,17 +28,20 @@
                     <span class="producto__price">10.590,00 ARS</span>
                 </div>
 
-                <p>
-                    <label for="unidades1"></label>
-                    <select name="unidades1" id="unidades1">
-                        <option value="ninguno">0</option>
+                <div class="form_Productos">
+                    <label class="my-1 mr-2" for="unidades1">Cantidad:</label>
+                    <select class="form-control" id="unidades1">
+                        <option hidden></option>
                         <option value="1_pantalon_corto">1</option>
                         <option value="2_pantalon_corto">2</option>
                         <option value="3_pantalon_corto">3</option>
                         <option value="4_pantalon_corto">4</option>
-                    </select>
 
-                </p>
+                    </select>
+                    <button class="boton" id="geTurno" name="geTurno" onclick="DibujarFact()" type="submit"
+                            value=0>Comprar
+                    </button>
+                </div>
 
             </div>
 
@@ -49,17 +53,20 @@
                     <h3 class="product__title">PANTALON NARANJA</h3>
                     <span class="producto__price">9.590,00 ARS</span>
                 </div>
-                <p>
-                    <label for="unidades2"></label>
-                    <select name="unidades2" id="unidades2">
-                        <option value="ninguno">0</option>
+                <div class="form_Productos">
+                    <label class="my-1 mr-2" for="unidades2">Cantidad:</label>
+                    <select class="form-control" id="unidades2">
+                        <option hidden></option>
                         <option value="1_pantalon_naranja">1</option>
                         <option value="2_pantalon_naranja">2</option>
                         <option value="3_pantalon_naranja">3</option>
                         <option value="4_pantalon_naranja">4</option>
-                    </select>
 
-                </p>
+                    </select>
+                    <button class="boton" id="geTurno" name="geTurno" onclick="DibujarFact()" type="submit"
+                            value=0>Comprar
+                    </button>
+                </div>
 
             </div>
 
@@ -71,17 +78,20 @@
                     <h3 class="product__title">JEAN</h3>
                     <span class="producto__price">9.700,00 ARS</span>
                 </div>
-                <p>
-                    <label for="unidades3"></label>
-                    <select name="unidades3" id="unidades3">
-                        <option value="ninguno">0</option>
-                        <option value="1_pantalon_jean">1</option>
-                        <option value="2_pantalon_jean">2</option>
-                        <option value="3_pantalon_jean">3</option>
-                        <option value="4_pantalon_jean">4</option>
-                    </select>
+                <div class="form_Productos">
+                    <label class="my-1 mr-2" for="unidades1">Cantidad:</label>
+                    <select class="form-control" id="unidades1">
+                        <option hidden></option>
+                        <option value="1_pantalon_corto">1</option>
+                        <option value="2_pantalon_corto">2</option>
+                        <option value="3_pantalon_corto">3</option>
+                        <option value="4_pantalon_corto">4</option>
 
-                </p>
+                    </select>
+                    <button class="boton" id="geTurno" name="geTurno" onclick="DibujarFact()" type="submit"
+                            value=0>Comprar
+                    </button>
+                </div>
 
 
             </div>
@@ -238,12 +248,9 @@
 
         </section>
     </div>
-    <button class="boton" id="geTurno" name="geTurno" onclick="DibujarFact()" type="submit"
-            value=0>Generar
-        Factura
-    </button>
+
 </main>
-<a href="index.html"> Pagina Principal </a>
+
 
 <canvas id="canvasdibujar" width="666px" height="466px" style="border:1px solid#D3D3D3">
     Tu navegador no soporta el tag de HTML5 canvas.

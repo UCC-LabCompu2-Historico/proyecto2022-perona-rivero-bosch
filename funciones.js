@@ -1,7 +1,6 @@
 
 
 
-/* CANVASSS*/
 /**
  * Dibujar en Canvas la factura
  * @method DibujarFact
@@ -21,6 +20,7 @@ function DibujarFact() {
     let precio = calcularPrecio(x);
 
 
+
     const value = document.getElementById('unidades1').value;
     let option = document.getElementById('unidades1').querySelector(`option[value="${value}"]`);
     option.disabled = true;
@@ -37,8 +37,6 @@ function DibujarFact() {
     ctx.fillStyle = "black";
 
 
-    let mail = document.getElementById("email").value;
-    ctx.fillText(mail, 220, 450);
 
     ctx.font = "13pt Sin Serif";
     ctx.fillStyle = "black";
@@ -51,16 +49,8 @@ function DibujarFact() {
 
 
             break;
-        case 2:
-            ctx.fillText(x, 12, 120);
-            ctx.fillText(precio, 555, 120);
-
-            break;
-        case 3:
-            ctx.fillText(x, 12, 140);
-            ctx.fillText(precio, 555, 140);
-            break;
         default:
+            alert("Elegir una opcion");
             total = total - precio;
 
     }
@@ -72,6 +62,8 @@ function DibujarFact() {
 
 
 }
+
+
 
 
 /**
@@ -99,50 +91,48 @@ function cargarCan() {
 
 }
 
-
-
-
 /**
  * Mostrar en pantalla el precio segun la opcion elegida
  * @method calcularPrecio
  * @return Precio
  * @param host
- */
+*/
 function calcularPrecio(host) {
     switch (host) {
+        case "ninguno":
+            return 0;
         case "1_pantalon_corto":
             return 10590;
         case "2_pantalon_corto":
-            return (10.590*2);
+            return (10590 * 2);
         case "3_pantalon_corto":
-            return (10.590*3);
+            return (10590 * 3);
         case "4_pantalon_corto":
-            return (10.590*4);
-        case "1_pantalon_naranja":
-            return 9590;
-        case "2_pantalon_naranja":
-            return 9590*2;
-        case "3_pantalon_naranja":
-            return 9590*3;
-        case "4_pantalon_naranja":
-            return 9590*4;
-        case "1_pantalon_jean":
-            return 9700;
-        case "2_pantalon_jean":
-            return 9700*2;
-        case "3_pantalon_jean":
-            return 9700*3;
-        case "4_pantalon_jean":
-            return 9700*4;
+            return (10590 * 4);
+    case "1_pantalon_naranja":
+        return 9590;
+    case "2_pantalon_naranja":
+        return 9590*2;
+    case "3_pantalon_naranja":
+        return 9590*3;
+    case "4_pantalon_naranja":
+        return 9590*4;
+        /*
+    case "1_pantalon_jean":
+        return 9700;
+    case "2_pantalon_jean":
+        return 9700*2;
+    case "3_pantalon_jean":
+        return 9700*3;
+    case "4_pantalon_jean":
+        return 9700*4;*/
+    }}
 
-    }
-
-}
 
 
 /**
  * Verificador de datos completados
- * @method pedirTurno
+ * @method iniciarsesion
  * @return void
  */
 function pedirTurno() {
