@@ -180,7 +180,7 @@ function cargarCan() {
     let canvas = document.getElementById('canvasdibujar');
     let ctx = canvas.getContext("2d");
     let fondo = new Image();
-    fondo.src = "Imagenes/factura.png";
+    fondo.src = "Imagenes/factura.jpg";
     ctx.drawImage(fondo, 0, 0);
     fondo.onload = function () {
         ctx.drawImage(fondo, 0, 0)
@@ -321,21 +321,6 @@ function check(e) {
             if (auxD !== email.length || auxAr !== 1 || auxP < 1) {
                 alert("Ingrese un email valido");
                 document.getElementById('email').value = "";
-            }
-            break;
-        case "confirmar_contraseña":
-            let nomb = document.getElementById('confirmar_contraseña').value;
-            let siz = document.getElementById('confirmar_contraseña').value.length;
-            for (let i = 0; i < siz; i++) {
-                for (let j = 0; j < patronL.length; j++) {
-                    if (nomb[i] === patronL[j]) {
-                        auxC++;
-                    }
-                }
-            }
-            if (auxN !== nomb.length) {
-                alert("Ingrese contraseña valido");
-                document.getElementById('confirmar_contraseña').value = "";
             }
             break;
 
