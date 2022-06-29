@@ -109,7 +109,8 @@ function calcularPrecio(host) {
             return (10590 * 3);
         case "4_pantalon_corto":
             return (10590 * 4);
-    case "1_pantalon_naranja":
+
+            /*case "1_pantalon_naranja":
         return 9590;
     case "2_pantalon_naranja":
         return 9590*2;
@@ -276,4 +277,15 @@ function canvascargando() {
     posicionX = 10 + posicionX;
 
 
+}
+
+
+/**
+ * realizar compra
+ * @method compra
+ * @return void
+ */
+
+function show() {
+    alert("La compra fue realizada con exito!!");
 }
