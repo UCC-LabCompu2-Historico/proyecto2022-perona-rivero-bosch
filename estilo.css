@@ -435,17 +435,4 @@ ul, ol {
 }
 
 
-/*PAGAR*/
-#pagar {
-    width: 500px;
-    height: 420px;
-    background: black;
-    color: white;
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    box-sizing: border-box;
-    padding: 20px 20px;
-    border-radius: 10%;
-}
+
