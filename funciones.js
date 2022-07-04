@@ -353,12 +353,12 @@ function canvascargando() {
         contexto.fillRect(0, 0, 666, 50);
         contexto.font = "24pt Sin Serif";
         contexto.fillStyle = 'black';
-        var string = "Se ha pedido el turno!"
+        var string = "Se realizo la compra!"
         contexto.fillText(string, 200, 35)
     }
     if (posicionX > 755) {
         window.location.reload();
-        alert("Se ha solicitado el turno");
+        alert("Se realizo la compra con exito");
 
 
     }
@@ -368,13 +368,5 @@ function canvascargando() {
 }
 
 
-/**
- * realizar compra
- * @method compra
- * @return void
- */
 
-function show() {
-    alert("La compra fue realizada con exito!!");
-}
 
