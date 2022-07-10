@@ -17,6 +17,6 @@
 
 
 
-Link de Pagina Web: [GitHub (https://ucc-labcompu2.github.io/proyecto2022-perona-rivero-bosch/index.html)]
+Link de Pagina Web: [GitHub (https://ucc-labcompu2-Historico.github.io/proyecto2022-perona-rivero-bosch/index.html)]
 
 
